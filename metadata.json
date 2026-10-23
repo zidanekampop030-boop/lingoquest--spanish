@@ -1,0 +1,6 @@
+{
+  "name": "LingoQuest - App d'Apprentissage & Communauté",
+  "description": "Application d'apprentissage de langues interactive avec plus de 30 quiz, choix de la langue, chat serveur communautaire en temps réel, thème bleu ciel et mode sombre.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

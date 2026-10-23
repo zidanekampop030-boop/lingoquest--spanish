@@ -1,0 +1,256 @@
+@import "tailwindcss";
+
+@theme {
+  /* Sky Blue (Bleu Ciel) Primary Brand Palette */
+  --color-primary: #0284c7;
+  --color-primary-container: #0ea5e9;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #0369a1;
+  --color-primary-fixed: #bae6fd;
+  --color-primary-fixed-dim: #7dd3fc;
+  --color-on-primary-fixed: #082f49;
+  --color-on-primary-fixed-variant: #075985;
+
+  /* Secondary (Warm Amber/Gold accents) */
+  --color-secondary: #c26100;
+  --color-secondary-container: #f59e0b;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #78350f;
+  --color-secondary-fixed: #fef3c7;
+  --color-secondary-fixed-dim: #fde68a;
+  --color-on-secondary-fixed: #451a03;
+  --color-on-secondary-fixed-variant: #92400e;
+
+  /* Tertiary (Cyan & Ocean) */
+  --color-tertiary: #0284c7;
+  --color-tertiary-container: #38bdf8;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #0c4a6e;
+  --color-tertiary-fixed: #e0f2fe;
+  --color-tertiary-fixed-dim: #bae6fd;
+  --color-on-tertiary-fixed: #082f49;
+  --color-on-tertiary-fixed-variant: #075985;
+
+  /* Light Surface Canvas */
+  --color-surface: #f0f9ff;
+  --color-surface-bright: #f8fafc;
+  --color-surface-dim: #e2e8f0;
+  --color-surface-variant: #e0f2fe;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f0f9ff;
+  --color-surface-container: #e0f2fe;
+  --color-surface-container-high: #bae6fd;
+  --color-surface-container-highest: #7dd3fc;
+
+  --color-on-surface: #0f172a;
+  --color-on-surface-variant: #475569;
+  --color-inverse-surface: #0f172a;
+  --color-inverse-on-surface: #f8fafc;
+
+  --color-outline: #94a3b8;
+  --color-outline-variant: #cbd5e1;
+
+  --color-error: #ef4444;
+  --color-error-container: #fee2e2;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #991b1b;
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Dark Mode Theme Tokens */
+.dark {
+  --color-surface: #0b1329;
+  --color-surface-bright: #101c38;
+  --color-surface-dim: #060b17;
+  --color-surface-variant: #1e293b;
+  --color-surface-container-lowest: #0f172a;
+  --color-surface-container-low: #131f38;
+  --color-surface-container: #1a2849;
+  --color-surface-container-high: #243763;
+  --color-surface-container-highest: #2d457c;
+
+  --color-on-surface: #f8fafc;
+  --color-on-surface-variant: #94a3b8;
+  --color-inverse-surface: #f8fafc;
+  --color-inverse-on-surface: #0b1329;
+
+  --color-outline: #475569;
+  --color-outline-variant: #334155;
+
+  --color-primary-fixed: #1e3a5f;
+  --color-primary-fixed-dim: #0284c7;
+  --color-on-primary-fixed: #e0f2fe;
+
+  --color-secondary-fixed: #3b2207;
+  --color-secondary-fixed-dim: #78350f;
+  --color-on-secondary-fixed: #fef3c7;
+
+  --color-tertiary-fixed: #0f2d4a;
+  --color-tertiary-fixed-dim: #0369a1;
+  --color-on-tertiary-fixed: #e0f2fe;
+
+  --color-error-container: #450a0a;
+  --color-on-error-container: #fca5a5;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.material-symbols-fill {
+  font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom Spacing & Radius Aliases */
+:root {
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --margin: 1.25rem;
+  --gutter: 1rem;
+}
+
+/* Custom font style utilities */
+.font-stat-counter {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 800;
+}
+
+.font-headline-xl {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 800;
+}
+
+.font-headline-xl-mobile {
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 800;
+}
+
+.font-headline-lg {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 800;
+}
+
+.font-headline-md {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.font-headline-sm {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.font-body-lg {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+.font-body-md {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.font-body-sm {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.font-label-lg {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.font-label-md {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.font-label-sm {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 800;
+}
+
+/* Custom 3D tactile button effects with Sky Blue */
+.tactile-button-primary {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary);
+  border-bottom: 4px solid var(--color-on-primary-container);
+  transition: all 0.1s ease;
+}
+
+.tactile-button-primary:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+.tactile-button-blue {
+  background-color: var(--color-tertiary);
+  color: var(--color-on-tertiary);
+  border-bottom: 4px solid var(--color-on-tertiary-fixed-variant);
+  transition: all 0.1s ease;
+}
+
+.tactile-button-blue:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+.tactile-button-orange {
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-secondary);
+  border-bottom: 4px solid var(--color-secondary);
+  transition: all 0.1s ease;
+}
+
+.tactile-button-orange:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(1.5deg); }
+}
+
+.animate-float {
+  animation: floatSlow 3.5s ease-in-out infinite;
+}
